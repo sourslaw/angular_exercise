@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 import { Recipe } from '../../recipe.model';
-import { RecipeService } from '../../recipe.service';
 
 @Component({
   selector: 'app-recipe-item',
@@ -11,14 +10,9 @@ import { RecipeService } from '../../recipe.service';
 export class RecipeItemComponent implements OnInit {
   // Input allows to bind component from outside
   @Input() recipe: Recipe;
-
-  constructor(private recipeService: RecipeService) { }
+  @Input() index: number;
 
   ngOnInit(): void {
-  }
-
-  onSelected() {
-    this.recipeService.recipeSelectd.emit(this.recipe); // call method from recipe service
   }
 
 }
