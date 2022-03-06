@@ -15,12 +15,5 @@ export class AppComponent {
     this.log.push(new Date());
   }
 
-  loadedFeature = 'recipe';
-
-  onNavigate(feature: string) {
-    this.loadedFeature = feature;
-  }
-
-
 }
  
