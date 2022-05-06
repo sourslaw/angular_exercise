@@ -9,7 +9,7 @@ import { Subject } from 'rxjs';
 export class RecipeService {
   recipesChanged = new Subject<Recipe[]>();
 
-  recipes: Recipe[] = [
+  private recipes: Recipe[] = [
     new Recipe(
       'a test schnitzel',
       'this is a simple test desc.',
